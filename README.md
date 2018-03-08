@@ -4,7 +4,7 @@ This is a shell script to get some of the initial setup of homebrew, Chrome, Sla
 
 1. Clone the repo: 
 
-```git clone git@github.com:timmyRTR/developer-bootstrap.git```
+```git clone git@github.com:timmyRTR/bootstrap.git```
 
 2. Make any necessary additions to `mac-config.yml`
 
