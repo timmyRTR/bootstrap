@@ -1,0 +1,19 @@
+---
+- hosts: all
+  gather_facts: true
+  vars:
+    rbenv:
+      env: user
+      version: v0.4.0
+      default_ruby: 2.2.4
+      rubies:
+        - version: 2.0.0
+        - version: 2.2.4
+          env:
+            RUBY_CONFIGURE_OPTS: "--enable-shared"
+        - version: 2.3.4
+          env:
+            RUBY_CONFIGURE_OPTS: "--enable-shared"
+  roles:
+    - role: zzet.rbenv
+      rbenv_users: "{{ansible_user_id}}" 

@@ -1,0 +1,75 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: "no"
+configure_sudoers: "no"
+configure_terminal: "no"
+configure_osx: "yes"
+
+homebrew_installed_packages:
+  - autoconf
+  - bash-completion
+  - chromedriver
+  - gettext
+  - git
+  - gpg
+  - hub
+  - httpie
+  - iperf
+  - libevent
+  - sqlite
+  - nmap
+  - node
+  - nvm
+  - ssh-copy-id
+  - cowsay
+  - rbenv
+  - readline
+  - openssl
+  - pv
+  - watch
+  - wget
+  - wrk
+
+homebrew_taps:
+  - homebrew/core
+  - caskroom/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+  - firefox
+  - google-chrome
+  - insomniax
+  - intellij-idea-ce
+  - iterm2
+  - java
+  - mongodb
+  - mysqlworkbench
+  - nvalt
+  - rubymine
+  - skitch
+  - slack
+  - spectacle
+  - sublime-text
+  - transmit
+  - vagrant
+  - virtualbox
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+gem_packages:
+  - name: bundler
+    state: latest     # present/absent/latest, default: present
+npm_packages:
+  - name: webpack
+    state: present    # present/absent/latest, default: present
+    version: "^2.6"   # default: N/A
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
